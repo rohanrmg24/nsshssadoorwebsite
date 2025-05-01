@@ -218,22 +218,7 @@ const Contact = () => {
         </div>
         
         {/* Newsletter */}
-        <div className="mt-16 bg-accent rounded-lg p-8 shadow-sm">
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h3>
-            <p className="mb-6">Stay updated with the latest news, events, and announcements from our school.</p>
-            
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 rounded-md border border-gray-300 focus:border-primary focus:outline-none" required />
-              <button type="submit" className="bg-primary hover:bg-accent-red text-white font-medium px-6 py-3 rounded-md transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
-            </form>
-            <p className="text-xs text-gray-500 mt-3">
-              By subscribing, you agree to receive our newsletter emails. You can unsubscribe at any time.
-            </p>
-          </div>
-        </div>
+        
       </div>
     </section>;
 };
