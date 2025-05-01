@@ -54,7 +54,7 @@ const Navbar = () => {
             <span className="text-white font-bold text-lg">NSS</span>
           </div>
           <div className="hidden md:block">
-            <h1 className="font-bold text-xl leading-tight text-orange-500">NSS Higher Secondary School Adoor</h1>
+            <h1 className="font-bold text-xl leading-tight">NSS HSS Adoor</h1>
             <p className="text-xs leading-tight">School Code: 03030</p>
           </div>
         </a>
