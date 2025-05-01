@@ -1,6 +1,5 @@
 
 import { ChevronRight, Facebook, Instagram, X, MessageSquare, Mail, Phone, MapPin } from "lucide-react";
-import { Button } from "./ui/button";
 
 const quickLinks = [{
   name: "Home",
@@ -25,55 +24,14 @@ const quickLinks = [{
   href: "#contact"
 }];
 
-const resourceLinks = [{
-  name: "Academic Calendar",
-  href: "#"
-}, {
-  name: "Exam Schedule",
-  href: "#"
-}, {
-  name: "Student Handbook",
-  href: "#"
-}, {
-  name: "Parent Portal",
-  href: "#"
-}, {
-  name: "Career Opportunities",
-  href: "#"
-}];
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Newsletter Section */}
-      <div className="bg-primary py-10 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="max-w-lg">
-              <h3 className="text-xl md:text-2xl font-bold mb-2">Subscribe to Our Newsletter</h3>
-              <p className="text-sm md:text-base text-white/80">
-                Stay updated with the latest news, events, and announcements from our school.
-              </p>
-            </div>
-            <div className="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="px-4 py-3 rounded-md text-gray-900 w-full sm:w-64 md:w-80"
-              />
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white whitespace-nowrap">
-                Subscribe Now
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container mx-auto max-w-6xl pt-12 pb-6 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -123,26 +81,8 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-bold mb-6 relative inline-block">
-              Resources
-              <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
-            </h3>
-            <ul className="space-y-3">
-              {resourceLinks.map(link => (
-                <li key={link.name}>
-                  <a href={link.href} className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all">
-                    <ChevronRight size={16} className="mr-1 text-primary" />
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-bold mb-6 relative inline-block">
               Contact Us
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
