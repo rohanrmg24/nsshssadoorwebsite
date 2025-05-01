@@ -71,7 +71,11 @@ const Gallery = () => {
         </div>
         
         {/* Filter Categories */}
-        
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map(category => <button key={category.id} className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === category.id ? "bg-primary text-white" : "bg-white hover:bg-gray-100"}`} onClick={() => setActiveCategory(category.id)}>
+              {category.name}
+            </button>)}
+        </div>
         
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
