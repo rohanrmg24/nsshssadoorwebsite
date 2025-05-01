@@ -94,7 +94,7 @@ const Events = () => {
           <div className="bg-accent rounded-lg p-6 shadow-md max-w-md mx-auto px-[24px]">
             <div className="flex justify-between items-center mb-6">
               <button onClick={previousMonth} className="p-2 rounded-full hover:bg-gray-200">
-                <ChevronLeft size={20} className="py-0 my-0" />
+                <ChevronLeft size={20} />
               </button>
               <h4 className="font-bold text-xl">
                 {monthNames[currentMonth]} {currentYear}
@@ -119,7 +119,9 @@ const Events = () => {
                 <div className="w-4 h-4 rounded-full bg-primary"></div>
                 <span className="text-sm">Event Day</span>
               </div>
-              
+              <p className="text-sm text-gray-600 mt-2">
+                Click on a date with an indicator to view event details.
+              </p>
             </div>
           </div>
         </div>
