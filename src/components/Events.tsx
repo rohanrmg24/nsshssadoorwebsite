@@ -163,9 +163,7 @@ const Events = () => {
           </div>
           
           <div className="text-center mt-10">
-            <a href="#" className="inline-block bg-primary hover:bg-accent-red text-white font-medium px-6 py-3 rounded-md transition-colors">
-              View All News & Events
-            </a>
+            
           </div>
         </div>
       </div>
