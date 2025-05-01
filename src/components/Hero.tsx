@@ -1,9 +1,10 @@
+
 import { motion } from "framer-motion";
 const Hero = () => {
   return <section id="home" className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=2000&q=80" alt="NSS HSS Adoor Campus" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/d897be41-85d4-4430-b275-95ded5f388f5.png" alt="NSS HSS Adoor Campus" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       
