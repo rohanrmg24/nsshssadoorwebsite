@@ -1,8 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
 const navigationItems = [{
   name: "Home",
   href: "#home"
@@ -25,11 +23,9 @@ const navigationItems = [{
   name: "Contact",
   href: "#contact"
 }];
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -37,7 +33,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     setIsOpen(false);
     const element = document.querySelector(sectionId);
@@ -49,9 +44,7 @@ const Navbar = () => {
       });
     }
   };
-
-  return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : "bg-white shadow-sm py-4"}`}>
+  return <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : "bg-white shadow-sm py-4"}`}>
       <div className="container-center flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2" onClick={e => {
         e.preventDefault();
@@ -69,30 +62,19 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center">
           <div className="flex items-center space-x-6 mr-8">
-            {navigationItems.slice(0, -1).map(item => (
-              <a key={item.name} href={item.href} onClick={e => {
-                e.preventDefault();
-                scrollToSection(item.href);
-              }} className="text-sm font-medium relative group">
+            {navigationItems.slice(0, -1).map(item => <a key={item.name} href={item.href} onClick={e => {
+            e.preventDefault();
+            scrollToSection(item.href);
+          }} className="text-sm font-medium relative group">
                 {item.name}
                 <motion.span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" whileHover={{
-                  width: "100%"
-                }} />
-              </a>
-            ))}
+              width: "100%"
+            }} />
+              </a>)}
           </div>
           
           {/* Contact Us button on right */}
-          <a 
-            href="#contact" 
-            onClick={e => {
-              e.preventDefault();
-              scrollToSection("#contact");
-            }}
-            className="bg-primary hover:bg-accent-red text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-          >
-            Contact Us
-          </a>
+          
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -110,8 +92,6 @@ const Navbar = () => {
               </a>)}
           </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
