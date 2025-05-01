@@ -151,7 +151,7 @@ const Admission = () => {
         
         {/* Admission Steps - Responsive for both mobile and desktop */}
         <div className="mb-8 md:mb-12 px-4 md:px-0">
-          <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center my-0 py-[20px]">How to Apply</h3>
+          <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center my-0 py-[31px]">How to Apply</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {admissionProcess.map((process, index) => <motion.div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-md relative" initial={{
             opacity: 0,
