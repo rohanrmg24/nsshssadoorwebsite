@@ -105,12 +105,12 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
             </h3>
             <address className="not-italic text-gray-300 space-y-4">
-              <p>NSS HSS Road, Adoor</p>
-              <p>Pathanamthitta District</p>
-              <p>Kerala, India - 691523</p>
+              <p>4PQX+64J, Road, Vadakadathucavu P.O, Ezhamkulam, Adoor, Kerala 691529</p>
+              
+              
               <p className="mt-4">
-                <span className="block">Phone: +91 9876543210</span>
-                <span className="block mt-1">Email: info@nsshssadoor.edu</span>
+                <span className="block">Phone: +91 8281821908</span>
+                <span className="block mt-1">Email: nsshssadoor@gmail.com</span>
               </p>
             </address>
           </div>
