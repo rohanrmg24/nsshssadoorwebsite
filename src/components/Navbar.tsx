@@ -54,7 +54,7 @@ const Navbar = () => {
             <span className="text-white font-bold text-lg">NSS</span>
           </div>
           <div className="hidden md:block">
-            <h1 className="font-bold text-xl leading-tight">NSS Higher Secondary School Adoor</h1>
+            <h1 className="font-bold text-xl leading-tight">NSS HSS Adoor</h1>
             <p className="text-xs leading-tight">School Code: 03030</p>
           </div>
         </a>
@@ -70,9 +70,7 @@ const Navbar = () => {
             width: "100%"
           }} />
             </a>)}
-          <button className="bg-primary text-white rounded-md px-4 py-2 text-sm font-medium hover:bg-accent-red transition-colors">
-            Apply Now
-          </button>
+          
         </div>
 
         {/* Mobile Navigation Toggle */}
