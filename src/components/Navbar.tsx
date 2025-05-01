@@ -86,9 +86,7 @@ const Navbar = () => {
         }} className="text-sm font-medium py-2">
                 {item.name}
               </a>)}
-            <button className="bg-primary text-white rounded-md px-4 py-2 text-sm font-medium hover:bg-accent-red transition-colors">
-              Apply Now
-            </button>
+            
           </div>}
       </div>
     </nav>;
