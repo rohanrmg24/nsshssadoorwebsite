@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Phone } from "lucide-react";
 
 const timelineItems = [
   { year: "1960", title: "Founding", description: "NSS HSS Adoor was established to provide quality education to the local community." },
@@ -30,24 +30,28 @@ const staffMembers = [
   {
     name: "Dr. Rajesh Kumar",
     role: "Principal",
+    phone: "+91 9876543210",
     photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80",
     contact: "principal@nsshssadoor.edu"
   },
   {
     name: "Prof. Priya Menon",
     role: "Vice Principal",
+    phone: "+91 9876543211",
     photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80",
     contact: "vp@nsshssadoor.edu"
   },
   {
     name: "Dr. Anil Thomas",
     role: "Science Department Head",
+    phone: "+91 9876543212",
     photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=256&q=80",
     contact: "science@nsshssadoor.edu"
   },
   {
     name: "Prof. Lakshmi Nair",
     role: "Commerce Department Head",
+    phone: "+91 9876543213",
     photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=256&q=80",
     contact: "commerce@nsshssadoor.edu"
   }
@@ -75,11 +79,11 @@ const About = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-center">Our Journey</h3>
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-primary"></div>
+            {/* Timeline Line - hidden on mobile, shown on md and up */}
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-primary hidden md:block"></div>
             
             {/* Timeline Items */}
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {timelineItems.map((item, index) => (
                 <motion.div
                   key={item.year}
@@ -91,7 +95,13 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true, margin: "-100px" }}
                 >
-                  <div className="flex-1 md:w-1/2 mb-4 md:mb-0">
+                  {/* Content box */}
+                  <div className="flex-1 md:w-1/2 pl-12 md:pl-0 mb-4 md:mb-0 relative">
+                    {/* Year bubble for mobile (left aligned) */}
+                    <div className="md:hidden absolute left-0 top-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                      {item.year}
+                    </div>
+                    
                     <div className={`p-6 rounded-lg shadow-md bg-white h-full ${
                       index % 2 === 0 ? "md:mr-8" : "md:ml-8"
                     }`}>
@@ -99,11 +109,14 @@ const About = () => {
                       <p>{item.description}</p>
                     </div>
                   </div>
-                  <div className="md:w-0 flex justify-center">
-                    <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                  
+                  {/* Center year bubble - only visible on md+ */}
+                  <div className="md:w-0 hidden md:flex justify-center">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
                       {item.year}
                     </div>
                   </div>
+                  
                   <div className="flex-1 md:w-1/2"></div>
                 </motion.div>
               ))}
@@ -166,8 +179,12 @@ const About = () => {
                 <div className="p-4 text-center">
                   <h4 className="font-bold text-lg">{member.name}</h4>
                   <p className="text-sm text-gray-600">{member.role}</p>
-                  <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm text-primary">{member.contact}</p>
+                  <div className="mt-2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                    <div className="flex items-center justify-center gap-1 text-primary">
+                      <Phone size={14} />
+                      <p className="text-sm">{member.phone}</p>
+                    </div>
+                    <p className="text-sm text-primary mt-1">{member.contact}</p>
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

@@ -1,4 +1,5 @@
-import { ChevronRight, Facebook, Instagram, X, WhatsApp, MessageSquare } from "lucide-react";
+
+import { ChevronRight, Facebook, Instagram, X, MessageSquare } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
