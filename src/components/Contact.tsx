@@ -159,7 +159,7 @@ const Contact = () => {
             
             {/* School Address & Contact */}
             <div className="bg-accent rounded-lg p-6 mb-8 shadow-sm">
-              <h4 className="font-bold text-lg mb-4">NSS Higher Secondary School</h4>
+              <h4 className="font-bold mb-4 text-lg">NSS Higher Secondary School Adoor</h4>
               
               <div className="space-y-4">
                 <div className="flex items-start">
