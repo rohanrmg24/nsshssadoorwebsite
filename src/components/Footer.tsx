@@ -1,29 +1,45 @@
-
 import { ChevronRight, Facebook, Instagram, X, MessageSquare } from "lucide-react";
-
-const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Academics", href: "#academics" },
-  { name: "Admission", href: "#admission" },
-  { name: "Events", href: "#events" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
-];
-
-const resourceLinks = [
-  { name: "Academic Calendar", href: "#" },
-  { name: "Exam Schedule", href: "#" },
-  { name: "Student Handbook", href: "#" },
-  { name: "Parent Portal", href: "#" },
-  { name: "Career Opportunities", href: "#" },
-];
-
+const quickLinks = [{
+  name: "Home",
+  href: "#home"
+}, {
+  name: "About",
+  href: "#about"
+}, {
+  name: "Academics",
+  href: "#academics"
+}, {
+  name: "Admission",
+  href: "#admission"
+}, {
+  name: "Events",
+  href: "#events"
+}, {
+  name: "Gallery",
+  href: "#gallery"
+}, {
+  name: "Contact",
+  href: "#contact"
+}];
+const resourceLinks = [{
+  name: "Academic Calendar",
+  href: "#"
+}, {
+  name: "Exam Schedule",
+  href: "#"
+}, {
+  name: "Student Handbook",
+  href: "#"
+}, {
+  name: "Parent Portal",
+  href: "#"
+}, {
+  name: "Career Opportunities",
+  href: "#"
+}];
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-gray-900 text-white pt-16 pb-6">
+  return <footer className="bg-gray-900 text-white pt-16 pb-6">
       <div className="container-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* School Info */}
@@ -33,8 +49,8 @@ const Footer = () => {
                 <span className="font-bold text-lg">NSS</span>
               </div>
               <div>
-                <h2 className="font-bold text-lg leading-tight">NSS HSS</h2>
-                <p className="text-xs leading-tight text-gray-300">Adoor</p>
+                <h2 className="font-bold leading-tight text-lg">NSS Higher Secondary School Adoor</h2>
+                <p className="text-xs leading-tight text-gray-300">School Code: 03030</p>
               </div>
             </div>
             <p className="mb-6 text-gray-300">
@@ -63,17 +79,12 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
             </h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <a href={link.href} className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all">
                     <ChevronRight size={16} className="mr-1 text-primary" />
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
@@ -84,17 +95,12 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
             </h3>
             <ul className="space-y-3">
-              {resourceLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all"
-                  >
+              {resourceLinks.map(link => <li key={link.name}>
+                  <a href={link.href} className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all">
                     <ChevronRight size={16} className="mr-1 text-primary" />
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
@@ -126,8 +132,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
