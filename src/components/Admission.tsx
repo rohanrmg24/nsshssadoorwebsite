@@ -1,4 +1,3 @@
-
 import { ChevronDown, ChevronUp, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -6,7 +5,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const eligibilityCriteria = ["Completion of SSLC (10th standard) with a minimum of 75% marks", "Proficiency in English language", "Satisfactory performance in the entrance examination", "Successful completion of the admission interview"];
 const requiredDocuments = ["Original SSLC mark sheet and pass certificate", "Transfer certificate from previous school", "Conduct certificate", "Birth certificate", "Passport-sized photographs (4 copies)", "Aadhar card or other identity proof", "Category certificate (if applicable)"];
 const admissionProcess = [{
@@ -39,19 +37,14 @@ const faqs = [{
   question: "Can students transfer from another school mid-session?",
   answer: "Mid-session transfers are considered on a case-by-case basis, subject to seat availability and the student meeting our academic requirements. Additional documentation may be required for mid-session transfers."
 }];
-
 const Admission = () => {
   const [activeTab, setActiveTab] = useState<string>("eligibility");
-  
-  return (
-    <section id="admission" className="section-padding bg-accent">
+  return <section id="admission" className="section-padding bg-accent">
       <div className="container-center">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Admission Process</h2>
           <div className="mx-auto w-16 md:w-20 h-1 bg-primary mb-4 md:mb-6"></div>
-          <p className="text-base md:text-lg max-w-3xl mx-auto px-4 md:px-0">
-            Join our vibrant community of learners. We welcome applications from students who are passionate about learning and personal growth.
-          </p>
+          <p className="text-base md:text-lg max-w-3xl mx-auto px-px md:px-[16px] text-center">Join our vibrant community of passionate learners.</p>
         </div>
         
         {/* Mobile Tabs Navigation */}
@@ -65,19 +58,21 @@ const Admission = () => {
               <Card className="bg-white rounded-lg p-4 shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-center">Eligibility Criteria</h3>
                 <ul className="space-y-2">
-                  {eligibilityCriteria.map((criterion, index) => (
-                    <motion.li 
-                      key={index} 
-                      className="flex items-start text-sm"
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                  {eligibilityCriteria.map((criterion, index) => <motion.li key={index} className="flex items-start text-sm" initial={{
+                  opacity: 0,
+                  x: -10
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.2,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <span className="inline-block w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center mr-2 mt-0.5 flex-shrink-0">✓</span>
                       <span>{criterion}</span>
-                    </motion.li>
-                  ))}
+                    </motion.li>)}
                 </ul>
               </Card>
             </TabsContent>
@@ -85,19 +80,21 @@ const Admission = () => {
               <Card className="bg-white rounded-lg p-4 shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-center">Required Documents</h3>
                 <ul className="space-y-2">
-                  {requiredDocuments.map((document, index) => (
-                    <motion.li 
-                      key={index} 
-                      className="flex items-start text-sm"
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                  {requiredDocuments.map((document, index) => <motion.li key={index} className="flex items-start text-sm" initial={{
+                  opacity: 0,
+                  x: -10
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.2,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <span className="inline-block w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center mr-2 mt-0.5 flex-shrink-0">•</span>
                       <span>{document}</span>
-                    </motion.li>
-                  ))}
+                    </motion.li>)}
                 </ul>
               </Card>
             </TabsContent>
@@ -110,19 +107,21 @@ const Admission = () => {
             <h3 className="text-2xl font-bold mb-6">Eligibility Criteria</h3>
             <div className="bg-white rounded-lg p-6 shadow-md h-full">
               <ul className="space-y-3">
-                {eligibilityCriteria.map((criterion, index) => (
-                  <motion.li 
-                    key={index} 
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                {eligibilityCriteria.map((criterion, index) => <motion.li key={index} className="flex items-start" initial={{
+                opacity: 0,
+                x: -20
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.3,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
                     <span className="inline-block w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
                     <span>{criterion}</span>
-                  </motion.li>
-                ))}
+                  </motion.li>)}
               </ul>
             </div>
           </div>
@@ -130,19 +129,21 @@ const Admission = () => {
             <h3 className="text-2xl font-bold mb-6">Required Documents</h3>
             <div className="bg-white rounded-lg p-6 shadow-md h-full">
               <ul className="space-y-3">
-                {requiredDocuments.map((document, index) => (
-                  <motion.li 
-                    key={index} 
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                {requiredDocuments.map((document, index) => <motion.li key={index} className="flex items-start" initial={{
+                opacity: 0,
+                x: -20
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.3,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
                     <span className="inline-block w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center mr-3 mt-1 flex-shrink-0">•</span>
                     <span>{document}</span>
-                  </motion.li>
-                ))}
+                  </motion.li>)}
               </ul>
             </div>
           </div>
@@ -152,22 +153,24 @@ const Admission = () => {
         <div className="mb-8 md:mb-12 px-4 md:px-0">
           <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">How to Apply</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {admissionProcess.map((process, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-4 md:p-6 rounded-lg shadow-md relative"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+            {admissionProcess.map((process, index) => <motion.div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-md relative" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.3,
+            delay: index * 0.1
+          }} viewport={{
+            once: true
+          }}>
                 <div className="absolute -top-3 -left-3 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base">
                   {process.step}
                 </div>
                 <h4 className="text-lg md:text-xl font-bold mb-2 mt-2">{process.title}</h4>
                 <p className="text-sm md:text-base">{process.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
         </div>
         
@@ -191,14 +194,18 @@ const Admission = () => {
           <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-8 text-center">Frequently Asked Questions</h3>
           <div className="space-y-3 max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+              {faqs.map((faq, index) => <motion.div key={index} initial={{
+              opacity: 0,
+              y: 10
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.3,
+              delay: index * 0.1
+            }} viewport={{
+              once: true
+            }}>
                   <AccordionItem value={`faq-${index}`} className="border border-primary/20 rounded-lg overflow-hidden bg-white mb-3">
                     <AccordionTrigger className="px-4 py-3 md:px-6 md:py-4 text-left text-sm md:text-base font-medium hover:no-underline">
                       <span className="font-bold">{faq.question}</span>
@@ -207,14 +214,11 @@ const Admission = () => {
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </Accordion>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Admission;

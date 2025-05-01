@@ -132,13 +132,15 @@ const Academics = () => {
                     
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
-                        <h4 className="text-lg font-bold mb-3">Core Subjects</h4>
+                        <h4 className="text-lg font-bold mb-3">English
+
+                    </h4>
                         <ul className="list-disc list-inside space-y-2">
                           {course.subjects.map((subject, index) => <li key={index}>{subject}</li>)}
                         </ul>
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold mb-3">Program Features</h4>
+                        <h4 className="text-lg font-bold mb-3">Special coaching for competitive exams like JEE, NEET</h4>
                         <ul className="list-disc list-inside space-y-2">
                           {course.features.map((feature, index) => <li key={index}>{feature}</li>)}
                         </ul>
