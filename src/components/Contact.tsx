@@ -164,18 +164,18 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="text-primary mr-3 flex-shrink-0" size={20} />
-                  <p className="text-base">4PQX+64J, Road, Vadakadathucavu P.O, Ezhamkulam, Adoor, Kerala 691529</p>
+                  <p>NSS HSS Road, Adoor, Pathanamthitta District, Kerala, India - 691523</p>
                 </div>
                 
                 <div className="flex items-center cursor-pointer group" onClick={() => copyToClipboard("+91 9876543210")}>
                   <Phone className="text-primary mr-3 flex-shrink-0" size={20} />
-                  <p className="group-hover:text-primary transition-colors">+91 8281821908</p>
+                  <p className="group-hover:text-primary transition-colors">+91 9876543210</p>
                   <span className="text-xs ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500">(Click to copy)</span>
                 </div>
                 
                 <div className="flex items-center cursor-pointer group" onClick={() => copyToClipboard("info@nsshssadoor.edu")}>
                   <Mail className="text-primary mr-3 flex-shrink-0" size={20} />
-                  <p className="group-hover:text-primary transition-colors">nsshssadoor@gmail.com</p>
+                  <p className="group-hover:text-primary transition-colors">info@nsshssadoor.edu</p>
                   <span className="text-xs ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500">(Click to copy)</span>
                 </div>
               </div>
@@ -210,9 +210,9 @@ const Contact = () => {
             {/* Office Hours */}
             <div className="mt-6 p-4 bg-gray-100 rounded-md">
               <h5 className="font-bold mb-2">Office Hours</h5>
-              <p className="text-gray-700">Monday to Friday: 8:00 AM - 4:30 PM</p>
-              <p className="text-gray-700">Saturday: 9:00 AM - 12:00 PM</p>
-              <p className="text-gray-700">Sunday & Public Holidays: Closed</p>
+              <p className="text-gray-700">All Days - 9 AM to 4 PM</p>
+              
+              
             </div>
           </div>
         </div>
