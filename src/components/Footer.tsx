@@ -1,5 +1,4 @@
-
-import { ChevronRight, Facebook, Instagram, X, WhatsApp } from "lucide-react";
+import { ChevronRight, Facebook, Instagram, X, WhatsApp, MessageSquare } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -51,7 +50,7 @@ const Footer = () => {
                 <X size={18} />
               </a>
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <WhatsApp size={18} />
+                <MessageSquare size={18} />
               </a>
             </div>
           </div>

@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram, X, Phone, Mail, MapPin, WhatsApp } from "lucide-react";
+import { Facebook, Instagram, X, Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 
 const initialFormState = {
   name: "",
@@ -267,7 +266,7 @@ const Contact = () => {
                     <X size={20} />
                   </a>
                   <a href="#" className="bg-white p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
-                    <WhatsApp size={20} />
+                    <MessageSquare size={20} />
                   </a>
                 </div>
               </div>

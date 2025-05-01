@@ -105,12 +105,16 @@ const Gallery = () => {
               key={image.id}
               className="overflow-hidden rounded-lg shadow-md bg-white cursor-pointer h-[250px]"
               whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
               onClick={() => setSelectedImage(image.id)}
               layoutId={`gallery-image-${image.id}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ 
+                duration: 0.4, 
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100
+              }}
             >
               <div className="h-full w-full overflow-hidden group relative">
                 <img 
