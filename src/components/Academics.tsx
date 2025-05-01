@@ -223,7 +223,7 @@ const Academics = () => {
             duration: 0.2
           }}>
                 <div className="p-6">
-                  <h4 className="font-bold mb-2">{doc.name}</h4>
+                  <h4 className="font-bold mb-2 text-center">{doc.name}</h4>
                   <div className="flex justify-between text-sm text-gray-500">
                     <span>{doc.type}</span>
                     <span>{doc.size}</span>
