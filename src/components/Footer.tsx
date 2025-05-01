@@ -37,8 +37,12 @@ const Footer = () => {
           {/* School Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="font-bold text-lg">NSS</span>
+              <div className="h-14 w-14 flex-shrink-0">
+                <img 
+                  src="/lovable-uploads/1ccaac73-b290-432c-8806-3752c0e1f5c6.png" 
+                  alt="NSS Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h2 className="font-bold leading-tight text-lg md:text-xl">NSS Higher Secondary School Adoor</h2>
