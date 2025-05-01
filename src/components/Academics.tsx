@@ -99,9 +99,7 @@ const Academics = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Academic Programs</h2>
           <div className="mx-auto w-20 h-1 bg-primary mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto">
-            We offer comprehensive higher secondary programs designed to nurture intellectual growth and prepare students for future success.
-          </p>
+          <p className="max-w-3xl mx-auto text-lg">We offer programs that prepare students for future success.</p>
         </div>
         
         {/* Course Tabs */}
