@@ -53,9 +53,16 @@ const Footer = () => {
                 <p className="text-xs leading-tight text-gray-300">School Code: 03030</p>
               </div>
             </div>
-            <p className="mb-6 text-gray-300">
-              Empowering students with knowledge, skills, and values since 1960. We focus on academic excellence and holistic development.
-            </p>
+            <p className="mb-6 text-gray-300">Empowering students since 1960 with focus on excellence and growth.
+
+
+
+
+
+
+
+
+          </p>
             <div className="flex gap-4">
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
                 <Facebook size={18} />
@@ -89,20 +96,7 @@ const Footer = () => {
           </div>
           
           {/* Resources */}
-          <div>
-            <h3 className="text-lg font-bold mb-6 relative inline-block">
-              Resources
-              <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
-            </h3>
-            <ul className="space-y-3">
-              {resourceLinks.map(link => <li key={link.name}>
-                  <a href={link.href} className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all">
-                    <ChevronRight size={16} className="mr-1 text-primary" />
-                    {link.name}
-                  </a>
-                </li>)}
-            </ul>
-          </div>
+          
           
           {/* Contact Info */}
           <div>
