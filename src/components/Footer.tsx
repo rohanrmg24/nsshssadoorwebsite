@@ -1,5 +1,6 @@
 
 import { ChevronRight, Facebook, Instagram, X, MessageSquare, Mail, Phone, MapPin } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const quickLinks = [{
   name: "Home",
@@ -26,15 +27,16 @@ const quickLinks = [{
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const isMobile = useIsMobile();
   
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto max-w-6xl pt-12 pb-6 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+      <div className="container mx-auto max-w-7xl pt-12 pb-6 px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* School Info */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
                 <span className="font-bold text-lg">NSS</span>
               </div>
@@ -43,22 +45,22 @@ const Footer = () => {
                 <p className="text-xs leading-tight text-gray-300">School Code: 03030</p>
               </div>
             </div>
-            <p className="mb-6 text-gray-300">
+            <p className="text-gray-300 text-sm md:text-base">
               Empowering students since 1960 with focus on excellence and growth.
               We believe in nurturing young minds for a brighter future.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
-                <Facebook size={18} />
+              <a href="#" aria-label="Facebook" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
+                <Facebook size={isMobile ? 16 : 18} />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
-                <Instagram size={18} />
+              <a href="#" aria-label="Instagram" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
+                <Instagram size={isMobile ? 16 : 18} />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
-                <X size={18} />
+              <a href="#" aria-label="Twitter" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
+                <X size={isMobile ? 16 : 18} />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
-                <MessageSquare size={18} />
+              <a href="#" aria-label="Message" className="bg-gray-800 hover:bg-primary p-2 rounded-full transition-colors">
+                <MessageSquare size={isMobile ? 16 : 18} />
               </a>
             </div>
           </div>
@@ -69,7 +71,7 @@ const Footer = () => {
               Quick Links
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
             </h3>
-            <ul className="space-y-3 grid grid-cols-1">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
               {quickLinks.map(link => (
                 <li key={link.name}>
                   <a href={link.href} className="inline-flex items-center text-gray-300 hover:text-white hover:translate-x-1 transition-all">
@@ -82,12 +84,12 @@ const Footer = () => {
           </div>
           
           {/* Contact Info */}
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="text-lg font-bold mb-6 relative inline-block">
               Contact Us
               <span className="absolute -bottom-2 left-0 w-10 h-1 bg-primary"></span>
             </h3>
-            <address className="not-italic text-gray-300 space-y-4">
+            <address className="not-italic text-gray-300 space-y-4 text-sm md:text-base">
               <div className="flex items-start">
                 <MapPin size={18} className="mr-3 text-primary flex-shrink-0 mt-1" />
                 <p>4PQX+64J, Road, Vadakadathucavu P.O, Ezhamkulam, Adoor, Kerala 691529</p>
@@ -100,14 +102,14 @@ const Footer = () => {
               
               <div className="flex items-center">
                 <Mail size={18} className="mr-3 text-primary flex-shrink-0" />
-                <p>nsshssadoor@gmail.com</p>
+                <p className="break-words">nsshssadoor@gmail.com</p>
               </div>
             </address>
           </div>
         </div>
         
         {/* Copyright */}
-        <div className="pt-6 border-t border-gray-700 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left text-gray-400 text-sm">
+        <div className="pt-6 border-t border-gray-700 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left text-gray-400 text-xs sm:text-sm">
           <p>© {currentYear} NSS Higher Secondary School, Adoor. All rights reserved.</p>
           <div className="flex items-center justify-center md:justify-end gap-4">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
